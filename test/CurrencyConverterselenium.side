@@ -1,0 +1,97 @@
+{
+  "id": "1c7f8b3f-f397-4259-ba18-44276ec2e09c",
+  "version": "2.0",
+  "name": "Currency Converter",
+  "url": "https://samantarp.github.io",
+  "tests": [{
+    "id": "8d9cebea-6e5f-4d6b-97a2-b76f768f7fe6",
+    "name": "TC-2 Convert an amount from euro to libra",
+    "commands": [{
+      "id": "2865b850-c705-4292-a399-0094cdb43038",
+      "comment": "Given abre la pagina currency converter",
+      "command": "open",
+      "target": "/currencyConverter/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93959bdb-37bd-4162-b999-9fc004c8e771",
+      "comment": "And open desktop size",
+      "command": "setWindowSize",
+      "target": "1024x768",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88f1b31f-e685-4c1e-8624-2375c51ec838",
+      "comment": "When user click in cantidad",
+      "command": "click",
+      "target": "id=cantidad",
+      "targets": [
+        ["id=cantidad", "id"],
+        ["css=#cantidad", "css:finder"],
+        ["xpath=//input[@id='cantidad']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "31dcf0c3-e5ed-4624-8904-3d298e6c6240",
+      "comment": "And user type amount 10",
+      "command": "type",
+      "target": "id=cantidad",
+      "targets": [
+        ["id=cantidad", "id"],
+        ["css=#cantidad", "css:finder"],
+        ["xpath=//input[@id='cantidad']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "10"
+    }, {
+      "id": "f697a13e-8e15-4014-8646-af5186bf7b04",
+      "comment": "",
+      "command": "click",
+      "target": "id=monedaA",
+      "targets": [
+        ["id=monedaA", "id"],
+        ["css=#monedaA", "css:finder"],
+        ["xpath=//select[@id='monedaA']", "xpath:attributes"],
+        ["xpath=//select[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b77cf542-6d20-4201-bfbe-8de30d9eae41",
+      "comment": "And user select Libra",
+      "command": "select",
+      "target": "id=monedaA",
+      "targets": [],
+      "value": "label=Libra"
+    }, {
+      "id": "2cb992c3-d225-477d-bde9-2b0457fa220f",
+      "comment": "The user click convert button",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Convertir')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "852f66c0-d177-40c0-9967-9275e976cde9",
+      "comment": "Then the user see result 8.82",
+      "command": "assertText",
+      "target": "id=resultado",
+      "targets": [],
+      "value": "8.82"
+    }]
+  }],
+  "suites": [{
+    "id": "70c09705-d15a-4f92-856d-3a04b9993e13",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://samantarp.github.io/"],
+  "plugins": []
+}
