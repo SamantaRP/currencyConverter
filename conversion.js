@@ -5,11 +5,11 @@ var selectMonedaA = document.getElementById("monedaA");
 
 // valor de todas las monedas
 // 1libra = 1.24 dolar
-let libradolar = 1.24;
-// 1e = 0.88 libras
-let eurolibra = 0.88;
+let libradolar = 1.2488693;
+// 1e = 0.87 libras
+let eurolibra = 0.87074637;
 // 1e = 1.09 dolar
-let eurodolar = 1.09;
+let eurodolar = 1.08750;
 
 
 function convertir(){
@@ -66,6 +66,7 @@ else if(monedaDe=="dolar"){
 else {
     resultado = "error seleccione una moneda valida";
 }
-
+//poner resultado con 2 decimales
+resultado = resultado.toFixed(2);
 document.getElementById("resultado").innerHTML = resultado;
 }
