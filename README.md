@@ -1,6 +1,5 @@
 # currencyConverter
 Web App for currency exchange
-# CurrencyConverter
 Nombre del proyecto: CurrencyConverter
 # URL del proyecto: https://samantarp.github.io/currencyConverter/
 # Jira del proyecto: https://samrp84.atlassian.net/jira/software/projects/CC/boards/2
